@@ -9,7 +9,6 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --font-sans: var(--font-archivo-sans);
-  --font-display: var(--font-inter-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +20,7 @@
 
 body {
   color: var(--primary);
+  font-weight: 400;
   font-family: var(--font-sans);
 }
 
