@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section className="w-screen h-screen relative fade-in" id="home">
       <Whatsapp />
-      <Seguimiento />
+      <Seguimiento description={false} />
 
       <Fade
         autoplay={true}

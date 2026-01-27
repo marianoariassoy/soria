@@ -16,6 +16,7 @@ const Header = () => {
   return (
     <header
       className={`fixed w-screen transition-transform duration-500 ease-in-out top-0 z-50 flex flex-col shadow-2xl bg-white  ${mounted ? "translate-y-0" : "-translate-y-full"}`}
+      id="top"
     >
       <div className="bg-black/10 py-2 text-sm flex px-4 lg:justify-end lg:pr-38">
         <Submenu />

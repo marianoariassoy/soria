@@ -1,7 +1,10 @@
 "use client";
 import { nav, submenu } from "@/lib/data";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
   const handleScroll = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -15,22 +18,51 @@ const Footer = () => {
           <ul className="font-light">
             {nav.map((item) => (
               <li key={item.name}>
-                <button
-                  className="hover:underline cursor-pointer"
-                  onClick={() => handleScroll(item.target)}
-                >
-                  {item.name}
-                </button>
+                {item.target ? (
+                  pathname === "/" ? (
+                    <button
+                      className="hover:text-secondary cursor-pointer"
+                      onClick={() => handleScroll(item.target)}
+                    >
+                      {item.name}
+                    </button>
+                  ) : (
+                    <Link
+                      href={"/#" + item.target}
+                      className="hover:text-secondary cursor-pointer"
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`hover:text-secondary cursor-pointer ${
+                      pathname === item.href ? "text-secondary font-medium" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
             {submenu.map((item) => (
               <li key={item.name}>
-                <button
-                  onClick={() => handleScroll(item.target)}
-                  className="hover:text-secondary cursor-pointer"
-                >
-                  {item.name}
-                </button>
+                {pathname === "/" ? (
+                  <button
+                    onClick={() => handleScroll(item.target)}
+                    className="hover:text-secondary cursor-pointer"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    href={"/#" + item.target}
+                    className="hover:text-secondary cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

@@ -3,33 +3,33 @@ import { Linkedin, Instagram, Whatsapp } from "./icons";
 export const nav = [
   {
     name: "Home",
-    href: "/",
+    href: "",
     target: "home",
   },
   {
     name: "¿Quienes somos?",
-    href: "/",
+    href: "",
     target: "about",
   },
   {
     name: "Servicios",
-    href: "/",
+    href: "",
     target: "services",
   },
   {
     name: "Rutas y Cobertura",
-    href: "/",
+    href: "",
     target: "routes",
   },
   {
     name: "Cotización On-Line",
     href: "/cotizacion",
-    target: "#",
+    target: "",
   },
   {
     name: "Seguimiento",
-    href: "/",
-    target: "#",
+    href: "/seguimiento",
+    target: "",
   },
 ];
 

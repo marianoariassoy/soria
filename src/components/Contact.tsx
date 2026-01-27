@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <section className="px-4 py-20 lg:pt-40 scroll-m-26" id="contact" ref={ref}>
-      <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
+      <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-x-12 gap-y-8">
         <div
           className={`lg:w-1/2 flex flex-col gap-4 opacity-0 ${inView ? "animate-fade-right" : ""}`}
         >
