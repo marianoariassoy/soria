@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: "Soria JMI Logistica",
   description:
     "Somos una empresa familiar de transporte, logística y distribución, ubicada en el Norte de Argentina, dedicada al traslado de todo tipo de mercadería para empresas, pymes y particulares de distintos rubros.",
+  icons: {
+    icon: "/assets/favicon.png",
+  },
 };
 
 export default function RootLayout({
