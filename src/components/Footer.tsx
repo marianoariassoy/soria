@@ -36,7 +36,13 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      <div>logo</div>
+      <div>
+        <img
+          src="/assets/logo-footer.svg"
+          className="h-14 hover:opacity-80"
+          alt="Logo footer"
+        />
+      </div>
     </footer>
   );
 };
