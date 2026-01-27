@@ -1,4 +1,12 @@
+"use client";
+import { useInView } from "react-intersection-observer";
+
 const Services = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
   const data = [
     {
       title: "Transporte de carga general",
@@ -34,7 +42,7 @@ Nuestro objetivo es integrarnos a tu cadena logística como un socio estratégic
     },
   ];
   return (
-    <section className="px-4 py-20 scroll-m-26" id="services">
+    <section className="px-4 py-20 scroll-m-26" id="services" ref={ref}>
       <div className="w-full max-w-6xl mx-auto flex flex-col gap-y-12">
         <header>
           <h1 className="text-4xl lg:text-5xl text-center mb-8">
@@ -54,7 +62,7 @@ Nuestro objetivo es integrarnos a tu cadena logística como un socio estratégic
           {data.map((item, index) => (
             <article
               key={index}
-              className="flex flex-col gap-y-4 border-2 border-primary px-4 py-8 rounded-3xl"
+              className={`flex flex-col gap-y-4 border-2 border-primary px-4 py-8 rounded-3xl opacity-0 ${index === 0 ? "delay-100" : index === 1 ? "delay-300" : "delay-200"} ${inView ? "animate-fade-up" : ""}`}
             >
               <div className="text-center pb-4 border-b-2 border-primary lg:px-4">
                 <div className="h-20 flex justify-center pb-4">

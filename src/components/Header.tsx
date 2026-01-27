@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Social from "./Social";
 import Submenu from "./Submenu";
@@ -5,8 +7,16 @@ import NavMobile from "./NavMobile";
 import Link from "next/link";
 
 const Header = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
-    <header className="fixed w-screen top-0 z-50 flex flex-col shadow-2xl bg-white">
+    <header
+      className={`fixed w-screen transition-transform duration-500 ease-in-out top-0 z-50 flex flex-col shadow-2xl bg-white  ${mounted ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <div className="bg-black/10 py-2 text-sm flex px-4 lg:justify-end lg:pr-38">
         <Submenu />
       </div>

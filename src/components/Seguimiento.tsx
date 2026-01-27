@@ -1,6 +1,6 @@
 const Seguimiento = () => {
   return (
-    <div className="absolute px-2 lg:px-0 left-1/2 lg:left-8 top-1/2 -translate-y-1/2 -translate-x-1/2 lg:translate-0 flex flex-col gap-y-4 lg:gap-y-6 z-40">
+    <div className="absolute px-2 lg:px-0 left-1/2 lg:left-8 top-1/2 -translate-y-1/2 -translate-x-1/2 lg:translate-0 flex flex-col gap-y-4 lg:gap-y-6 z-40 opacity-0 animate-fade-right delay-300">
       <h3 className="flex flex-col text-3xl lg:text-4xl text-white leading-7  lg:leading-9 px-4">
         <span className="font-light">Seguimiento</span>
         <span className="font-medium">On-Line</span>

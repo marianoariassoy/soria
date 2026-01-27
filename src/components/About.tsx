@@ -1,9 +1,14 @@
 "use client";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 import Button from "./Button";
 
 const About = () => {
   const [section, setSection] = useState(0);
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
 
   const handleSection = (num: number) => {
     setSection(num);
@@ -16,15 +21,20 @@ const About = () => {
     <section
       className="bg-primary text-white px-4 py-20 scroll-m-26"
       id="about"
+      ref={ref}
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row lg:items-center gap-8">
-        <div className="lg:w-2/5">
+        <div
+          className={`lg:w-2/5 opacity-0 ${inView ? "animate-fade-right" : ""}`}
+        >
           <h1 className="flex flex-col text-4xl lg:text-5xl">
             <span className="font-medium">Quienes</span>
             <span className="font-extrabold">Somos?</span>
           </h1>
         </div>
-        <div className="lg:w-3/5 flex flex-col gap-y-8 font-medium">
+        <div
+          className={`lg:w-3/5 flex flex-col gap-y-8 font-medium opacity-0 ${inView ? "animate-fade-left" : ""}`}
+        >
           {section === 0 && (
             <p>
               Somos una empresa familiar de transporte, logística y

@@ -4,19 +4,14 @@ import Services from "@/components/Services";
 import Routes from "@/components/Routes";
 import Faqs from "@/components/Faqs";
 import Contact from "@/components/Contact";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <About />
-      <div className="aspect-16/5">
-        <img
-          src="https://images.pexels.com/photos/1255149/pexels-photo-1255149.jpeg"
-          alt="Foto"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
+      <Banner />
       <Services />
       <Routes />
       <Faqs />

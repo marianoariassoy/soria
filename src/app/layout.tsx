@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import "./hamburguer.css";
+import "./animations.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

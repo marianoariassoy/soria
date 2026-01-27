@@ -21,7 +21,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-screen h-screen relative" id="home">
+    <section className="w-screen h-screen relative fade-in" id="home">
       <Whatsapp />
       <Seguimiento />
 
