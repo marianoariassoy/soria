@@ -16,17 +16,28 @@ const Submenu = () => {
       <ul className="flex gap-x-4 lg:gap-x-6 items-center font-light">
         {submenu.map((item) => (
           <li key={item.name}>
-            {pathname === "/" ? (
-              <button
-                className="hover:text-secondary cursor-pointer"
-                onClick={() => handleScroll(item.target)}
-              >
-                {item.name}
-              </button>
+            {item.target ? (
+              pathname === "/" ? (
+                <button
+                  className="hover:text-secondary cursor-pointer"
+                  onClick={() => handleScroll(item.target)}
+                >
+                  {item.name}
+                </button>
+              ) : (
+                <Link
+                  href={"/#" + item.target}
+                  className="hover:text-secondary cursor-pointer"
+                >
+                  {item.name}
+                </Link>
+              )
             ) : (
               <Link
-                href={"/#" + item.target}
-                className="hover:text-secondary cursor-pointer"
+                href={item.href}
+                className={`hover:text-secondary cursor-pointer ${
+                  pathname === item.href ? "text-secondary font-medium" : ""
+                }`}
               >
                 {item.name}
               </Link>

@@ -36,8 +36,8 @@ export const nav = [
 export const submenu = [
   {
     name: "Preguntas Frecuentes",
-    href: "/",
-    target: "faqs",
+    href: "/faqs",
+    target: "",
   },
   {
     name: "Contacto",
