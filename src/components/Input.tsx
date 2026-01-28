@@ -11,7 +11,7 @@ const Input = ({ type, placeholder, register }: Input) => {
     <div>
       <input
         type={type}
-        className="w-full h-12 border-2 border-primary rounded-full bg-transparent px-4 focus:outline-none focus:ring-0 placeholder:text-primary mb-2"
+        className="w-full h-14 border-2 border-primary rounded-full bg-transparent px-4 focus:outline-none focus:ring-0 placeholder:text-primary mb-2"
         placeholder={placeholder}
         {...register}
       />

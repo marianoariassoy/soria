@@ -7,7 +7,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className="border border-primary bg-primary text-white rounded-full w-42 h-12 flex items-center justify-center font-bold hover:border-black hover:bg-secondary hover:border-secondary cursor-pointer"
+      className="border border-primary bg-primary text-white rounded-full w-42 h-14 flex items-center justify-center font-bold hover:bg-secondary hover:border-secondary cursor-pointer"
       onClick={onClick}
     >
       {children}

@@ -9,7 +9,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`border  rounded-full w-44 h-12 flex items-center justify-center font-extrabold cursor-pointer ${active ? "bg-secondary border-secondary" : "border-white bg-transparent hover:border-secondary hover:bg-secondary"}`}
+      className={`border  rounded-full w-44 h-14 flex items-center justify-center font-extrabold cursor-pointer ${active ? "bg-secondary border-secondary" : "border-white bg-transparent hover:border-secondary hover:bg-secondary"}`}
       onClick={onClick}
     >
       {children}

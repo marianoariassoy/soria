@@ -7,3 +7,13 @@ export interface Contact {
   email: string;
   message: string;
 }
+
+export interface Quote {
+  origin: string;
+  destination: string;
+  type_cargo: string;
+  quantity: number;
+  weight: string;
+  height: string;
+  value: string;
+}

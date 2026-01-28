@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios, { AxiosError } from "axios";
 import Input from "@/components/Input";
@@ -11,7 +11,6 @@ import Error from "@/components/Error";
 const Page = () => {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
-  const [image, setImage] = useState<File | null>(null);
   const [sended, setSended] = useState(false);
 
   const {
@@ -22,20 +21,9 @@ const Page = () => {
 
   const onSubmit: SubmitHandler<Contact> = async (data) => {
     setSending(true);
-    const formData = new FormData();
-    formData.append("data", JSON.stringify(data));
-    formData.append("file", image!);
 
     try {
-      const response = await axios.post(
-        "https://api.imltenis.com.ar/users/register",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        },
-      );
+      const response = await axios.post("", data);
       if (response?.data?.error) {
         setError(response.data.message);
         setSending(false);
