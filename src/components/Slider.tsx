@@ -8,6 +8,10 @@ interface Home {
 }
 
 const Hero = ({ data }: { data: Home[] }) => {
+  const indicators = () => (
+    <div className="indicator bg-white rounded-full mx-2 w-2 h-2 border-0"></div>
+  );
+
   return (
     <Fade
       autoplay={true}
@@ -15,7 +19,7 @@ const Hero = ({ data }: { data: Home[] }) => {
       infinite={true}
       pauseOnHover={false}
       arrows={false}
-      indicators={true}
+      indicators={indicators}
     >
       {data.map((item, index) => (
         <div

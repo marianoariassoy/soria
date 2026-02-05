@@ -6,11 +6,11 @@ const page = () => {
     <section className="w-screen h-screen relative fade-in">
       <Whatsapp />
       <Seguimiento description={true} />
-
+      <div className="bg-black/30 absolute top-0 left-0 w-full h-full z-20"></div>
       <div
-        className="h-full w-full bg-center bg-cover"
+        className="h-full w-full bg-center bg-cover z-10"
         style={{
-          backgroundImage: `url(https://images.pexels.com/photos/6170463/pexels-photo-6170463.jpeg)`,
+          backgroundImage: "url('/assets/seguimiento.jpg')",
         }}
       ></div>
     </section>

@@ -23,7 +23,7 @@ const Seguimiento = ({ description }: { description: boolean }) => {
         <input
           className="border-white bg-transparent lg:w-70 px-4 focus:outline-none focus:ring-0 placeholder:text-primary/50 h-12 font-medium"
           type="text"
-          placeholder="Ingresá tu número de seguimiento "
+          placeholder="Ingresá tu número de seguimiento"
         />
         <button className="border border-primary bg-primary text-white rounded-full h-12 px-4 flex items-center justify-center font-extrabold hover:border-black hover:bg-black cursor-pointer text-nowrap">
           Seguí tu envio

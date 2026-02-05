@@ -37,6 +37,24 @@ body {
   }
 }
 
+.indicator {
+  margin-top: -60px !important;
+  z-index: 5000 !important;
+}
+
 .indicators li {
-  margin: 0 3px !important;
+  z-index: 5000 !important;
+}
+
+.indicator {
+  cursor: pointer;
+  padding: 6px;
+  text-align: center;
+  border: 0;
+  margin: 5px 5px;
+}
+
+.indicator.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }

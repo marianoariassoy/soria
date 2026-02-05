@@ -18,7 +18,6 @@ const Hero = async () => {
     <section className="w-screen h-screen relative fade-in" id="home">
       <Whatsapp />
       <Seguimiento description={false} />
-
       <Slider data={data} />
     </section>
   );

@@ -41,7 +41,7 @@ const Services = ({ data }: { data: Servicios[] }) => {
                 <div className="h-18 flex justify-center pb-4">
                   <img src={item.image} className="h-full" alt="Icon" />
                 </div>
-                <h2 className="text-xl font-bold">{item.title}</h2>
+                <h2 className="text-xl font-bold lg:min-h-14">{item.title}</h2>
               </div>
               <p className="text-sm lg:px-4 leading-tight">{item.text}</p>
             </article>
