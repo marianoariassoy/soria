@@ -13,7 +13,7 @@ const Banner = () => {
       ref={ref}
     >
       <img
-        src="https://images.pexels.com/photos/1255149/pexels-photo-1255149.jpeg"
+        src="/assets/banner.jpg"
         alt="Foto"
         className="w-full h-full object-cover object-center"
       />
