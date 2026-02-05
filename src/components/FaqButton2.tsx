@@ -12,7 +12,12 @@ const FaqButton = ({ item }: { item: any }) => {
   return (
     <article className="flex flex-col gap-y-4 border-2 border-primary rounded-3xl p-4 transition-all">
       <div className="flex items-center gap-4 justify-between lg:px-4">
-        <h2 className="lg:text-2xl flex-1 font-bold">{item.question}</h2>
+        <h2
+          className="lg:text-2xl flex-1 font-bold cursor-pointer hover:text-black"
+          onClick={toggleShow}
+        >
+          {item.title}
+        </h2>
         <button
           className={`border border-primary h-12 w-12 rounded-full flex items-center justify-center cursor-pointer ${show ? "bg-white" : "bg-primary text-white hover:bg-white hover:text-primary"}`}
           onClick={toggleShow}
@@ -24,7 +29,7 @@ const FaqButton = ({ item }: { item: any }) => {
       </div>
       {show && (
         <p className="border-t-2 border-primary lg:px-4 py-4 leading-tight text-black/60">
-          {item.answer}
+          {item.text}
         </p>
       )}
     </article>
