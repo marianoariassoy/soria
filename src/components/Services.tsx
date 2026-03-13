@@ -18,9 +18,8 @@ const Services = ({ data }: { data: Servicios[] }) => {
     <section className="px-4 py-20 scroll-m-26" id="services" ref={ref}>
       <div className="w-full max-w-6xl mx-auto flex flex-col gap-y-12">
         <header>
-          <h1 className="text-4xl lg:text-5xl text-center mb-8">
-            <span className="font-medium">Nuestros</span>
-            <span className="font-extrabold"> Servicios</span>
+          <h1 className="text-3xl lg:text-5xl text-center mb-8 font-extrabold">
+            Nuestros Servicios
           </h1>
           <p className="text-center max-w-4xl mx-auto leading-tight font-medium">
             Ofrecemos soluciones de transporte y logística pensadas para

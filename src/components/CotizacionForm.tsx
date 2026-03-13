@@ -5,7 +5,7 @@ import axios, { AxiosError } from "axios";
 import Input from "@/components/Input2";
 import Select from "@/components/Select-2";
 import Button from "@/components/Button3";
-// import Loader from "@/components/Loader";
+import Loader from "@/components/Loader";
 import { Quote } from "@/types";
 import Error from "@/components/Error";
 import Link from "next/link";
@@ -46,7 +46,17 @@ const Page = () => {
 
   const errorMessage = "Este dato es obligatorio";
 
-  if (sended) return <div></div>;
+  if (sended)
+    return (
+      <div>
+        <h2 className="text-3xl font-bold mb-4">
+          Su solicitud ha sido enviada.
+        </h2>
+        <p className="text-xl mb-30 text-secondary ">
+          Gracias por su pedido cotización. Le responderemos en breve.
+        </p>
+      </div>
+    );
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-4">
@@ -101,7 +111,7 @@ const Page = () => {
         </div>
         <div className="form-control">
           <Input
-            type="email"
+            type="text"
             title="Altura (cm)"
             placeholder="Ejemplo: 20"
             register={register("height", {})}
@@ -110,7 +120,7 @@ const Page = () => {
         </div>
         <div className="form-control">
           <Input
-            type="email"
+            type="text"
             title="Valor Declarado"
             placeholder="50000"
             register={register("value", {})}
@@ -118,13 +128,8 @@ const Page = () => {
           <Error error={errors.value} />
         </div>
       </div>
-      {/* <div className="form-control mt-4 lg:mt-8">
-        {sending ? <Loader /> : <Button>Cotizar</Button>}
-      </div> */}
       <div className="form-control mt-4 lg:mt-8">
-        <Link href="/cotizacion/resultado">
-          <Button>Cotizar</Button>
-        </Link>
+        {sending ? <Loader /> : <Button>Cotizar</Button>}
       </div>
     </form>
   );

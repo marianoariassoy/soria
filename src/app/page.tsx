@@ -5,6 +5,7 @@ import Routes from "@/components/Routes";
 import Faqs from "@/components/FaqsContainer";
 import Contact from "@/components/Contact";
 import Banner from "@/components/Banner";
+import PorqueElegirnos from "@/components/PorqueElegirnos";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Banner />
       <Services />
       <Routes />
+      <PorqueElegirnos />
       <Faqs />
       <Contact />
     </main>

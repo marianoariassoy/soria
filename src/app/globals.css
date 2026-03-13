@@ -9,13 +9,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --font-sans: var(--font-archivo-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --text-5xl: 2.5rem;
 }
 
 body {
@@ -37,16 +31,13 @@ body {
   }
 }
 
-.indicator {
-  margin-top: -60px !important;
-  z-index: 5000 !important;
-}
-
 .indicators li {
   z-index: 5000 !important;
 }
 
 .indicator {
+  margin-top: -60px !important;
+  z-index: 5000 !important;
   cursor: pointer;
   padding: 6px;
   text-align: center;

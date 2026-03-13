@@ -33,7 +33,7 @@ const AboutSections = ({ data }: { data: QuienesSomos[] }) => {
         <div
           className={`lg:w-2/5 opacity-0 ${inView ? "animate-fade-right" : ""}`}
         >
-          <h1 className="flex flex-col text-4xl lg:text-5xl lg:pt-20">
+          <h1 className="flex flex-col text-4xl lg:text-6xl lg:pt-20">
             <span className="font-medium">Quienes</span>
             <span className="font-extrabold">Somos?</span>
           </h1>

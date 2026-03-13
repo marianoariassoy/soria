@@ -13,7 +13,7 @@ const Nav = () => {
 
   return (
     <nav className="hidden lg:block">
-      <ul className="flex gap-x-6 items-center font-light">
+      <ul className="flex gap-x-6 items-center">
         {nav.map((item) => (
           <li key={item.name}>
             {item.target ? (

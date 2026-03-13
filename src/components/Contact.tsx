@@ -1,7 +1,7 @@
 "use client";
 import { useInView } from "react-intersection-observer";
-import { social } from "@/lib/data";
 import ContactForm from "./ContactForm";
+import { Linkedin, Instagram, Whatsapp } from "@/lib/icons";
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -16,34 +16,58 @@ const Contact = () => {
           className={`lg:w-1/2 flex flex-col gap-4 opacity-0 ${inView ? "animate-fade-right" : ""}`}
         >
           <div>
-            <h2 className="font-extrabold text-4xl lg:text-6xl mb-8">
+            <h2 className="font-extrabold text-3xl lg:text-6xl mb-8">
               Contacto
             </h2>
-            <p className="leading-tight font-medium">
-              Si necesitás una cotización, querés evaluar una ruta específica o
-              simplemente hacer una consulta, estamos a disposición para
-              ayudarte.
+            <p className="leading-tight font-medium mb-4">
+              Si su organización requiere una cotización formal, el análisis de
+              una ruta logística específica o asesoramiento sobre nuestros
+              servicios de distribución, nuestro equipo de atención está a su
+              disposición para brindar soluciones a medida.
             </p>
-          </div>
-          <div className="flex flex-col gap-y-2 mt-8">
-            <h3 className="font-medium">Redes Sociales</h3>
-            <hr className="border-t-2 border-primary w-20" />
-            <div>
-              <nav>
-                <ul className="flex items-center gap-x-4 text-xl">
-                  {social.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        className="hover:text-secondary"
-                      >
-                        <item.icon />
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
+            <div className="flex flex-col gap-y-4">
+              <p className="font-bold">
+                Establezca contacto con nosotros a través de nuestros canales
+                oficiales:
+              </p>
+              <ul className="font-medium flex flex-col gap-y-1">
+                <li className="flex gap-x-1 items-center">
+                  Atención Comercial Inmediata:
+                  <a
+                    href="https://www.whatsapp.com/send?phone=+5622222222"
+                    target="_blank"
+                    className="hover:text-secondary text-lg"
+                  >
+                    <Whatsapp />
+                  </a>
+                </li>
+                <li className="flex gap-x-1 items-center">
+                  Gestión Administrativa y Presupuestos:
+                  <a
+                    href="mailto:soriajmilog@soriajmi.com"
+                    className="hover:underline"
+                  >
+                    soriajmilog@soriajmi.com
+                  </a>
+                </li>
+                <li className="flex gap-x-1 items-center">
+                  Ecosistema Digital y Actualizaciones:
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    className="hover:text-secondary text-lg"
+                  >
+                    <Linkedin />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/soriajmilog"
+                    target="_blank"
+                    className="hover:text-secondary text-lg ml-1"
+                  >
+                    <Instagram />
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

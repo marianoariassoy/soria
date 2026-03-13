@@ -16,7 +16,7 @@ const Faqs = async () => {
   return (
     <section className="px-4 lg:px-8 py-12 lg:py-20 mt-30 max-w-7xl mx-auto">
       <div className="flex flex-col gap-y-8">
-        <h1 className="text-3xl pr-12 lg:text-5xl font-extrabold">
+        <h1 className="text-3xl pr-12 lg:text-4xl font-extrabold">
           Preguntas Frecuentes
         </h1>
         <p className="font-medium text-lg text-black/60">

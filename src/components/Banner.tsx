@@ -9,7 +9,7 @@ const Banner = () => {
 
   return (
     <div
-      className={`aspect-16/5 opacity-0 ${inView ? "fade-in" : ""}`}
+      className={`aspect-10/5 lg:aspect-16/5 opacity-0 ${inView ? "fade-in" : ""}`}
       ref={ref}
     >
       <img

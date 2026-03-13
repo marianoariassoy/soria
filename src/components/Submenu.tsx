@@ -13,7 +13,7 @@ const Submenu = () => {
 
   return (
     <nav>
-      <ul className="flex gap-x-4 lg:gap-x-6 items-center font-light">
+      <ul className="flex gap-x-4 lg:gap-x-6 items-center">
         {submenu.map((item) => (
           <li key={item.name}>
             {item.target ? (

@@ -7,19 +7,16 @@ const Seguimiento = ({ description }: { description: boolean }) => {
       </h3>
       {description && (
         <p className="text-white w-full max-w-2xl px-4 leading-tight">
-          Seguimiento en tiempo real de tu mercadería. <br />
           En SORIA JMI entendemos que la tranquilidad de saber dónde está tu
           carga es tan importante como que llegue a destino.
           <br />
           <br />
-          Podés encontrar el número de envío en tu correo electrónico de
-          confirmación, en la nota de envío o en el remito de entrega.
-          <br />
-          <br />
-          Figura como número de guía.
+          Por eso, contamos con un servicio de rastreo satelital que te permite:
+          Acceder a un link de seguimiento y ver el recorrido de la unidad en
+          tiempo real.
         </p>
       )}
-      <div className="bg-white w-full lg:w-auto rounded-2xl lg:rounded-full p-3 flex flex-col lg:flex-row gap-x-4 shadow-xl">
+      {/* <div className="bg-white w-full lg:w-auto rounded-2xl lg:rounded-full p-3 flex flex-col lg:flex-row gap-x-4 shadow-xl">
         <input
           className="border-white bg-transparent lg:w-70 px-4 focus:outline-none focus:ring-0 placeholder:text-primary/50 h-12 font-medium"
           type="text"
@@ -28,7 +25,7 @@ const Seguimiento = ({ description }: { description: boolean }) => {
         <button className="border border-primary bg-primary text-white rounded-full h-12 px-4 flex items-center justify-center font-extrabold hover:border-black hover:bg-black cursor-pointer text-nowrap">
           Seguí tu envio
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

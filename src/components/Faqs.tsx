@@ -22,8 +22,8 @@ const Faqs = ({ data }: { data: Faqs[] }) => {
       id="faqs"
       ref={ref}
     >
-      <div className="w-full max-w-6xl mx-auto flex flex-col gap-y-12">
-        <h1 className="text-4xl lg:text-5xl text-center font-extrabold">
+      <div className="w-full max-w-6xl mx-auto flex flex-col gap-y-20">
+        <h1 className="text-3xl lg:text-5xl text-center font-extrabold">
           Preguntas Frecuentes
         </h1>
         <div className="grid lg:grid-cols-3 items-start gap-8">
