@@ -8,9 +8,20 @@ import Link from "next/link";
 
 const Header = () => {
   const [mounted, setMounted] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
   }, []);
 
   return (
@@ -21,12 +32,12 @@ const Header = () => {
       <div className="bg-black/10 py-2 text-sm flex px-4 lg:justify-end lg:pr-38">
         <Submenu />
       </div>
-      <div className="px-4 lg:px-8 py-4 flex justify-between items-center">
+      <div className="px-4 lg:px-8  flex justify-between items-center">
         <div>
           <Link href="/">
             <img
               src="/assets/logo-main.svg"
-              className="h-14 hover:opacity-80"
+              className={`transition-all hover:opacity-80 ${scrolled ? "h-18" : "h-28"}`}
               alt="Logo"
             />
           </Link>
