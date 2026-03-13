@@ -33,7 +33,7 @@ const PorqueElegirnosItem = ({ data }: { data: Data }) => {
       >
         <div className="flex flex-col gap-y-2 items-start">
           {data.icon1 && (
-            <img src={data.icon1} alt={data.title} className="h-18 mb-2" />
+            <img src={data.icon1} alt={data.title} className="h-24" />
           )}
           <h2 className="text-xl font-bold">{data.title}</h2>
           <p>{data.text}</p>
@@ -41,7 +41,7 @@ const PorqueElegirnosItem = ({ data }: { data: Data }) => {
         {data.title2 && data.text2 && (
           <div className="flex flex-col gap-y-2 items-start">
             {data.icon2 && (
-              <img src={data.icon2} alt={data.title2} className="h-18 mb-2" />
+              <img src={data.icon2} alt={data.title2} className="h-24" />
             )}
             <h2 className="text-xl font-bold">{data.title2}</h2>
             <p>{data.text2}</p>
