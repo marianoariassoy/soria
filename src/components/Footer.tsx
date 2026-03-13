@@ -82,7 +82,7 @@ const Footer = () => {
       <div>
         <img
           src="/assets/logo-footer.svg"
-          className="h-14 hover:opacity-80"
+          className="h-24 hover:opacity-80"
           alt="Logo footer"
         />
       </div>
