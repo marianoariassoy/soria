@@ -13,7 +13,7 @@ const Banner = () => {
       ref={ref}
     >
       <img
-        src="/assets/banner.jpg"
+        src="https://backend.soriajmilogydistribuciones.com/images-static/banner.jpg"
         alt="Foto"
         className="w-full h-full object-cover object-center"
       />

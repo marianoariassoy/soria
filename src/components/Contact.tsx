@@ -34,7 +34,7 @@ const Contact = () => {
                 <li className="flex gap-x-1 items-center">
                   Atención Comercial Inmediata:
                   <a
-                    href="https://www.whatsapp.com/send?phone=+5622222222"
+                    href="http://wa.me/543876405531"
                     target="_blank"
                     className="hover:text-secondary text-lg"
                   >

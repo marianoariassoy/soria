@@ -10,7 +10,8 @@ const page = () => {
       <div
         className="h-full w-full bg-center bg-cover z-10"
         style={{
-          backgroundImage: "url('/assets/seguimiento.jpg')",
+          backgroundImage:
+            "url('https://backend.soriajmilogydistribuciones.com/images-static/seguimiento.jpg')",
         }}
       ></div>
     </section>

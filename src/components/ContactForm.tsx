@@ -8,6 +8,8 @@ import Loader from "@/components/Loader";
 import { Contact } from "@/types";
 import Error from "@/components/Error";
 
+// Soriajmilog@soriajmi.com
+
 const Page = () => {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
