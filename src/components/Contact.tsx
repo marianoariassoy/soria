@@ -53,7 +53,7 @@ const Contact = () => {
                 <li className="flex gap-x-1 items-center">
                   Ecosistema Digital y Actualizaciones:
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://www.linkedin.com/company/soria-jmi-log%C3%ADstica-y-distribuciones/about/?viewAsMember=true"
                     target="_blank"
                     className="hover:text-secondary text-lg"
                   >

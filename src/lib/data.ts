@@ -49,17 +49,17 @@ export const submenu = [
 export const social = [
   {
     name: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/soriajmilog",
     icon: Instagram,
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/company/soria-jmi-log%C3%ADstica-y-distribuciones/about/?viewAsMember=true",
     icon: Linkedin,
   },
   {
     name: "Whatsapp",
-    href: "https://www.whatsapp.com/",
+    href: "http://wa.me/543876405531",
     icon: Whatsapp,
   },
 ];
