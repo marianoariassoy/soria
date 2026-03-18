@@ -1,12 +1,17 @@
 import { UseFormRegisterReturn } from "react-hook-form";
 import { Forward } from "@/lib/icons";
 
+interface Data {
+  name: string;
+}
+
 interface Input {
   register: UseFormRegisterReturn;
   title: string;
+  data: Data[];
 }
 
-const Select = ({ register, title }: Input) => {
+const Select = ({ register, title, data }: Input) => {
   return (
     <div>
       <label className="block mb-4">
@@ -17,11 +22,11 @@ const Select = ({ register, title }: Input) => {
           className="appearance-none not-visited:border text-black/50 border-black/50 w-full h-18 rounded-full bg-transparent px-8 cursor-pointer focus:outline-none hover:text-black focus:border-secondary"
           {...register}
         >
-          <option value="19">Caka</option>
-          <option value="20">Santa Fe</option>
-          <option value="21">Santiago del Estero</option>
-          <option value="22">Tierra del Fuego</option>
-          <option value="23">Tucumán</option>
+          {data.map((item) => (
+            <option key={item.name} value={item.name}>
+              {item.name}
+            </option>
+          ))}
         </select>
         <div className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 border border-secondary rounded-full flex items-center justify-center text-secondary">
           <span className="rotate-90 block">

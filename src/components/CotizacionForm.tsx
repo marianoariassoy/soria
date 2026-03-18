@@ -8,7 +8,7 @@ import Button from "@/components/Button3";
 import Loader from "@/components/Loader";
 import { Quote } from "@/types";
 import Error from "@/components/Error";
-import Link from "next/link";
+import { typeCargo } from "@/lib/data";
 
 const Page = () => {
   const [sending, setSending] = useState(false);
@@ -82,6 +82,7 @@ const Page = () => {
         <div></div>
         <div className="form-control">
           <Select
+            data={typeCargo}
             title="Tipo de carga"
             register={register("type_cargo", { required: errorMessage })}
           />

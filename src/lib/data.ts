@@ -63,3 +63,24 @@ export const social = [
     icon: Whatsapp,
   },
 ];
+
+export const typeCargo = [
+  {
+    name: "Pallets",
+  },
+  {
+    name: "⁠Bultos/ unidades",
+  },
+  {
+    name: "⁠Granos",
+  },
+  {
+    name: "⁠Mercadería",
+  },
+  {
+    name: "⁠Líquido/ Producto",
+  },
+  {
+    name: "⁠Otros",
+  },
+];
