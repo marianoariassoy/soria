@@ -1,10 +1,14 @@
 export interface Contact {
+  to: string;
+  from: string;
+  from_name: string;
+  subject: string;
   name: string;
   lastname: string;
   company: string;
   location: string;
-  phone: string;
   email: string;
+  phone: string;
   message: string;
 }
 
@@ -16,4 +20,7 @@ export interface Quote {
   weight: string;
   height: string;
   value: string;
+  name: string;
+  email: string;
+  phone: string;
 }

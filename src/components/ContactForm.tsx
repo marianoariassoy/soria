@@ -5,10 +5,18 @@ import axios, { AxiosError } from "axios";
 import Input from "@/components/Input";
 import Button from "@/components/Button2";
 import Loader from "@/components/Loader";
+import { FieldError } from "react-hook-form";
 import { Contact } from "@/types";
-import Error from "@/components/Error";
 
-// Soriajmilog@soriajmi.com
+type ErrorProps = {
+  error?: FieldError;
+};
+
+const Error = ({ error }: ErrorProps) => {
+  if (!error) return null;
+
+  return <div className="mt-2 text-secondary text-sm">{error.message}</div>;
+};
 
 const Page = () => {
   const [sending, setSending] = useState(false);
@@ -23,9 +31,18 @@ const Page = () => {
 
   const onSubmit: SubmitHandler<Contact> = async (data) => {
     setSending(true);
+    const sender = {
+      to: "soriajmilog@soriajmi.com",
+      from: "no-reply@soriajmilogydistribuciones.com",
+      from_name: "SoriaJ MI",
+      subject: "Contacto",
+    };
 
     try {
-      const response = await axios.post("", data);
+      const response = await axios.post(
+        "https://backend.soriajmilogydistribuciones.com/send-email.php",
+        { ...data, ...sender },
+      );
       if (response?.data?.error) {
         setError(response.data.message);
         setSending(false);
@@ -46,7 +63,20 @@ const Page = () => {
 
   const errorMessage = "Este dato es obligatorio";
 
-  if (sended) return <div></div>;
+  if (sended)
+    return (
+      <div>
+        <div className="flex flex-col gap-y-4">
+          <h1 className="font-extrabold text-2xl lg:text-4xl">
+            ¡Gracias por contactarnos!
+          </h1>
+          <p className="leading-tight font-medium">
+            Le escribiremos en breve con usted para poder ponerse en contacto
+            con nosotros.
+          </p>
+        </div>
+      </div>
+    );
 
   return (
     <div>
