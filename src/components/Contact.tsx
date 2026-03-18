@@ -41,7 +41,7 @@ const Contact = () => {
                     <Whatsapp />
                   </a>
                 </li>
-                <li className="flex gap-x-1 items-center">
+                <li className="flex gap-x-1 items-center flex-wrap">
                   Gestión Administrativa y Presupuestos:
                   <a
                     href="mailto:soriajmilog@soriajmi.com"

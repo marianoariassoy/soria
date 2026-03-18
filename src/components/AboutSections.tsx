@@ -13,7 +13,7 @@ const AboutSections = ({ data }: { data: QuienesSomos[] }) => {
   const [section, setSection] = useState(0);
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   const handleSection = (num: number) => {

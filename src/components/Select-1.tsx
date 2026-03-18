@@ -19,21 +19,16 @@ const Select1 = ({ title, cities, selected, setSelected }: Props) => {
       <h3 className="font-extrabold mb-2">{title}</h3>
       <div className="relative">
         <select
-          className="appearance-none border-t-2 border-white w-full h-14 justify-center px-0 cursor-pointer focus:outline-none"
+          className="appearance-none border-t-2 border-white w-full h-14 justify-center px-0 cursor-pointer focus:outline-none text-black"
           onChange={(e) => setSelected(e.target.value)}
         >
           {cities.map((item, index) => (
-            <option
-              key={index}
-              className={`${
-                selected === item.title ? "text-black" : "text-white"
-              } font-medium`}
-            >
+            <option key={index} value={item.title}>
               {item.title}
             </option>
           ))}
         </select>
-        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-white text-lg">
+        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-black text-lg">
           <span className="rotate-90 block">
             <Forward />
           </span>

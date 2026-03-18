@@ -21,7 +21,7 @@ const Select3 = ({ title, cities, selected, setSelectedCity }: Props) => {
 
       <div className="relative">
         <select
-          className="appearance-none border-t-2 border-white w-full h-14 justify-center px-0 cursor-pointer focus:outline-none"
+          className="appearance-none border-t-2 border-white w-full h-14 justify-center px-0 cursor-pointer focus:outline-none text-black"
           onChange={(e) => setSelectedCity(e.target.value)}
         >
           {selectedProvince?.cities.map((item, index) => (
@@ -31,7 +31,7 @@ const Select3 = ({ title, cities, selected, setSelectedCity }: Props) => {
           ))}
         </select>
 
-        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-white text-lg">
+        <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-black text-lg">
           <span className="rotate-90 block">
             <Forward />
           </span>

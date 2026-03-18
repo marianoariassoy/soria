@@ -16,7 +16,7 @@ interface data {
 const PorqueSlider = ({ data }: { data: data[] }) => {
   const properties = {
     prevArrow: (
-      <button className="-translate-x-16 text-secondary hover:text-primary text-xl cursor-pointer">
+      <button className="-translate-y-20  lg:translate-y-0 lg:-translate-x-16 text-secondary hover:text-primary text-xl cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-12 w-12"
@@ -34,7 +34,7 @@ const PorqueSlider = ({ data }: { data: data[] }) => {
       </button>
     ),
     nextArrow: (
-      <button className="translate-x-16 text-secondary hover:text-primary text-xl cursor-pointer">
+      <button className="-translate-y-20  lg:translate-y-0 lg:translate-x-16 text-secondary hover:text-primary text-xl cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-12 w-12"

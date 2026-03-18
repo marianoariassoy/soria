@@ -10,7 +10,7 @@ const Routes = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.1,
   });
 
   const cities = [
@@ -104,8 +104,8 @@ const Routes = () => {
           </h1>
           <p className="text-center leading-tight font-medium">
             Conectamos las principales regiones del país, con un foco especial
-            en el transporte de mercadería entre el Norte, el Centro y el Sur de
-            Argentina...
+            en el transporte de mercadería entre el norte y el centro de
+            Argentina.
           </p>
         </header>
 
@@ -130,9 +130,10 @@ const Routes = () => {
             />
 
             <div>
-              <h3 className="font-bold mb-4"> Otras rutas</h3>
+              <h3 className="font-bold mb-4">Rutas Claves</h3>
               <p className="leading-tight font-medium">
-                Según el tipo de mercadería...
+                RN 9 y RN 34. Eje Norte (Jujuy, Salta y Tucumán) Autopista
+                Rosario-Bs. As. (RN 9).
               </p>
             </div>
           </div>
