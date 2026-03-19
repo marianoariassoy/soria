@@ -11,7 +11,7 @@ const page = () => {
         className="h-full w-full bg-center bg-cover z-10"
         style={{
           backgroundImage:
-            "url('https://backend.soriajmilogydistribuciones.com/images-static/seguimiento.jpg')",
+            "url('https://backend.soriajmilogydistribuciones.com/images-static/seguimiento.jpg?v=1232')",
         }}
       ></div>
     </section>
